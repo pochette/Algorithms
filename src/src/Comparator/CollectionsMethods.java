@@ -21,7 +21,7 @@ public class CollectionsMethods {
         final Map<Integer, String> emptyMap = Collections.EMPTY_MAP;
         System.out.println(emptyMap);
 
-        final Map<Integer, String> map = Collections.checkedMap()
+//        final Map<Integer, String> map = Collections.checkedMap();
 
     }
 }

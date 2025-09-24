@@ -1,5 +1,10 @@
 package CollectionsMethods;
 //TODO выполнить задание на знание методов Collections Framework
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Понял — вы хотите именно задачи на статические методы java.util.Collections (типа fill(), singletonList(), nCopies() и т.д.). Ниже — компактный набор упражнений от простых к сложным и пошаговые решения для нескольких ключевых заданий, чтобы можно было быстро запустить и понять тонкости.
  * <p>
@@ -169,5 +174,52 @@ package CollectionsMethods;
  */
 
 public class CollectionsMethods {
+    /**
+     * Collections.fill() — создайте ArrayList  из 10 элементов (произвольные значения), затем замените все элементы
+     * на одно значение с помощью Collections.fill(). (метод: fill)
+     */
+    ArrayList<Integer> tenElements = new ArrayList<>();
+
+    public static void main(String[] args) {
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Banana");
+        fruits.add("Apple");
+        fruits.add("Orange");
+        fruits.add("Mango");
+        fruits.add("Pineapple");
+
+        System.out.println(fruits);
+        Collections.sort(fruits, String.CASE_INSENSITIVE_ORDER);
+        System.out.println(fruits);
+        System.out.println();
+    }
+//        System.out.println(tenElements);
+//        Collections.fill(tenElements, 999);
+//        System.out.println(tenElements);
+//        /// /////////////////////////////
+//        List<String> singletonList = Collections.singletonList("6");
+//        System.out.println(singletonList);
+//        singletonList = Collections.nCopies(10, "1");
+//        List<String> mutableList = new ArrayList<>(singletonList);
+//        mutableList.add(1, "2nd element");
+//        System.out.println(mutableList);
+//
+//        List<String> emptyList = Collections.emptyList();
+//        emptyList = Collections.nCopies(45, "2");
+//        System.out.println(emptyList);
+//     //   emptyList.add(0, "1st element");
+//        List<String> notEmpty = List.of("er", "123", "23434");
+//      //  notEmpty.addFirst("232323");
+//        System.out.println(emptyList);
+
 
 }
+
+/**
+ * Collections.unmodifiableList() — оберните изменяемый список в unmodifiableList и продемонстрируйте UnsupportedOperationException. (метод: unmodifiableList)
+ * Средние (работа с копированием, поиском, заменой)
+ * Collections.copy() — скопируйте один список в другой. Обратите внимание на размер принимающего списка (подсказка: используйте Collections.nCopies() для подготовки). (метод: copy, nCopies)
+ * Collections.sort() + Collections.binarySearch() — отсортируйте список строк и найдите индекс заданной строки через binarySearch. (методы: sort, binarySearch)
+ * Collections.replaceAll() и Collections.frequency() — замените все вхождения одного значения на другое и подсчитайте частоту перед/после. (методы: replaceAll, frequency)
+ */
+
