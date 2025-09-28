@@ -1,5 +1,7 @@
 package UtilCollectionsClass;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PotatoLaboratory {
@@ -31,9 +33,18 @@ public class PotatoLaboratory {
     }
 
     private static List<Potato> findPotatoesForExperiment(List<Potato> potatoes) {
+    List<Potato> mutablePotatoes = new ArrayList<>(potatoes);
+       List<Potato> minPotatoes = new ArrayList<>();
+
+       Collections.sort(mutablePotatoes);
+        minPotatoes.add(mutablePotatoes.get(0));
+        minPotatoes.add(mutablePotatoes.get(1));
+        mutablePotatoes.remove(0);
+        mutablePotatoes.remove(0);
+
+
 
 /* Вычислите две самые большие и две самые маленькие картофелины,
-
 а затем выведите их в порядке от самых маленьких до самых больших.*/
 
         return null;

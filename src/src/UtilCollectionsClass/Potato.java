@@ -45,10 +45,8 @@ public class Potato implements Comparable<Potato> {
     @Override
 
     public int compareTo(Potato o) {
-        if (calculateAlpha(this) != calculateAlpha(o)) {
-            return
-        }
-// Сравните картофелины по альфа характеристике
+
+        return Integer.compare(calculateAlpha(this), calculateAlpha(o));
 
     }
 
