@@ -9,7 +9,6 @@ public class Practicum {
                 "Терминатор",
 
                 new DateTime(20, 11, 2021, 10, 0, 0),
-
                 new DateTime(27, 11, 2021, 23, 58, 58)
 
         );
