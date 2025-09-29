@@ -34,20 +34,20 @@ public class PotatoLaboratory {
 
     private static List<Potato> findPotatoesForExperiment(List<Potato> potatoes) {
     List<Potato> mutablePotatoes = new ArrayList<>(potatoes);
-       List<Potato> minPotatoes = new ArrayList<>();
-
+       List<Potato> result = new ArrayList<>();
        Collections.sort(mutablePotatoes);
-        minPotatoes.add(mutablePotatoes.get(0));
-        minPotatoes.add(mutablePotatoes.get(1));
-        mutablePotatoes.remove(0);
-        mutablePotatoes.remove(0);
 
+       result.add(mutablePotatoes.get(0));
+       result.add(mutablePotatoes.get(1));
+       result.add(mutablePotatoes.get(mutablePotatoes.size() - 2));
+       result.add(mutablePotatoes.getLast());
 
+       Collections.sort(result);
+
+        return result;
 
 /* Вычислите две самые большие и две самые маленькие картофелины,
 а затем выведите их в порядке от самых маленьких до самых больших.*/
-
-        return null;
 
     }
 
