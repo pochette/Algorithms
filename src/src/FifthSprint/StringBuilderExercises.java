@@ -41,9 +41,32 @@ public class StringBuilderExercises {
         String rainbowInString = String.join(", ", rainbow);
         System.out.println(rainbowInString);
 
-        String[] colors = new String[] {"красный", "жёлтый", "зеленый"};
-        String trafficLights = String.format("Цвета светофора: %s, %s и %s", colors[0], colors[1], colors[2]);
+        String[] colors = new String[] {"красный", "жёлтый", "Зеленый"};
+        String trafficLights = String.format("Цвета светофора: %S, %S и %S", colors[0], colors[1], colors[2]);
         System.out.println(trafficLights);
-        Formatter.
+
+        boolean theTruth = true;
+        System.out.printf("%b", theTruth);
+        System.out.printf("\n%B", theTruth);
+
+        System.out.printf("\n%S\n", trafficLights);
+
+        String pizza = "Пицца, 1 шт.,  310.50";
+        String tea = "Tea, 1 pc., 113.30";
+        int[]  numbers = {1,2,3,4,5,6,7,8,9,10};
+        System.out.print(numbers[0]);
+        System.out.printf("%40s", pizza);
+        System.out.print("\n" + numbers[1]);
+        System.out.printf("%40s", tea);
+
+        String discount = "-10%";
+        System.out.printf("\n%-40s", pizza);
+        System.out.println(discount);
+
+        double price = 12345.6789;
+        System.out.printf("\n%1.0f", price);
+        System.out.printf("\n%sn%s%n%s", pizza,tea,discount);
+
     }
+
 }
