@@ -1,4 +1,4 @@
-package ForthSprintPractice;
+package FifthSprint;
 
 import java.io.ByteArrayInputStream;
 import java.net.MalformedURLException;
@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ExceptionsExercises {
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args) throws MalformedURLException, NoSuchElementException {
 //        System.out.println(parsStringToUri("http://ya.ru"));
 //        System.out.println(parsStringToUri(null));
 //        System.out.println(parsStringToUri(":/"));
