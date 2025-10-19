@@ -21,8 +21,6 @@ public class Exercises {
         System.out.println("getRoot: " + HOME.getRoot());
         System.out.println("getFileSystem: " + HOME.getFileSystem());
 
-        Files.
-
 
     }
 }
