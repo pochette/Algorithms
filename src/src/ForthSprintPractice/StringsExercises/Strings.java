@@ -1,4 +1,4 @@
-package FifthSprint;
+package ForthSprintPractice.StringsExercises;
 
 public class Strings {
     public static boolean onlySingleSubstring(String initialString, String substring) {

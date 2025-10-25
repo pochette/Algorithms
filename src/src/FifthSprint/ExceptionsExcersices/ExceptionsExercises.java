@@ -1,4 +1,4 @@
-package FifthSprint;
+package FifthSprint.ExceptionsExcersices;
 
 import java.io.ByteArrayInputStream;
 import java.net.MalformedURLException;

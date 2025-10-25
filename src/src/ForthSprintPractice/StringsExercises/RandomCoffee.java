@@ -1,4 +1,4 @@
-package ForthSprintPractice;
+package ForthSprintPractice.StringsExercises;
 
 import java.util.ArrayList;
 import java.util.List;

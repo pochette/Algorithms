@@ -1,7 +1,6 @@
-package FifthSprint;
+package FifthSprint.ExceptionsExcersices;
 
 import java.io.File;
-import java.io.IOException;
 
 public class IOFilesExercises {
     private static final String HOME = System.getProperty("user.home");

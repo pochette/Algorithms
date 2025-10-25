@@ -1,4 +1,4 @@
-package ForthSprintPractice;
+package ForthSprintPractice.StringsExercises;
 
 
 public class Stranger {

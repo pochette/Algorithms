@@ -1,8 +1,4 @@
-package FifthSprint;
-
-import com.sun.security.jgss.GSSUtil;
-
-import java.util.Formatter;
+package ForthSprintPractice.StringsExercises;
 
 public class StringBuilderExercises {
     public static void main(String[] args) {
