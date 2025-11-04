@@ -37,7 +37,7 @@ public class LambdasExpressions {
         System.out.println(kostya.isOlderPredicate().test(new Person("Старше", "salt", 16)));
         System.out.println(kostya.isOlderPredicate().test(new Person("Младше", "Paprika", 2)));
         System.out.println("old Favourite spice: " + kostya.getFavouriteSpice());
-        kostya.trySpice();
+        kostya.trySpice().accept("Кардамон");
         System.out.println("new Favourite spice: " + kostya.getFavouriteSpice());
         Person alice = new Person("Alice", "salt");
         Person bob = new Person("Bob", "pepper");
