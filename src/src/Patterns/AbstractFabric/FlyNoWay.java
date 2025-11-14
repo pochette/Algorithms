@@ -1,4 +1,4 @@
-package Patterns;
+package Patterns.AbstractFabric;
 
 public class FlyNoWay implements FlyBehavior{
     public void fly(){

@@ -1,4 +1,4 @@
-package Patterns;
+package Patterns.AbstractFabric;
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

@@ -1,4 +1,4 @@
-package Patterns;
+package Patterns.AbstractFabric;
 
 public class Quack implements QuackBehavior{
     public void quack() {

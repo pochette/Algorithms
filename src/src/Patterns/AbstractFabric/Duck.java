@@ -1,4 +1,4 @@
-package Patterns;
+package Patterns.AbstractFabric;
 
 public abstract class Duck {
     protected FlyBehavior flyBehavior;
