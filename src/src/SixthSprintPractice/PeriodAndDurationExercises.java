@@ -38,7 +38,7 @@ class PeriodAndDurationExercises {
         LocalTime start = LocalTime.of(0, 0);
         LocalTime finish = LocalTime.of(1, 30);
 
-        Duration ninetyMinutes  = Duration.between(start, finish);
+        Duration ninetyMinutes = Duration.between(start, finish);
 
         LocalTime noon = LocalTime.of(12, 0);
         System.out.println("Старый момент времени: " + noon);
@@ -46,13 +46,11 @@ class PeriodAndDurationExercises {
 
         System.out.println("Новый момент времени: " + newTime);
 
-
-
         LocalTime taskStart = LocalTime.of(9, 0);
         LocalTime taskFinish = LocalTime.of(11, 30);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        Duration duration2 =Duration.between(taskStart, taskFinish);
+        Duration duration2 = Duration.between(taskStart, taskFinish);
 
         System.out.println("В прошлый раз задача была начата в " + taskStart.format(formatter) + ", а закончена в " +
                 taskFinish.format(formatter) + ".");
@@ -77,7 +75,6 @@ class PeriodAndDurationExercises {
         Duration duration1 = Duration.between(start2, finish2);
         System.out.println("Код выполнился за " + duration1.getSeconds() + "." + duration1.getNano());
 
-
         LocalTime secondTime = LocalTime.of(23, 40);
         LocalTime firstTime = LocalTime.of(14, 25);
 
@@ -86,8 +83,6 @@ class PeriodAndDurationExercises {
         System.out.println("Между двумя моментами времени: \n" +
                 duration3.toHours() + " часов, " + duration3.toMinutesPart() + " минут. ");
         System.out.println("Или " + duration3.toMinutes() + " Минут");
-
-
     }
 
 }

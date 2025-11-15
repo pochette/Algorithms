@@ -3,7 +3,7 @@ package SixthSprintPractice;
 import java.time.Instant;
 import java.util.Random;
 
-public class TimesExercises {
+public class InstantExercises {
 
     public static void main(String[] args) {
         Instant satelliteLaunchFromSec = Instant.ofEpochSecond(-386310686L);
