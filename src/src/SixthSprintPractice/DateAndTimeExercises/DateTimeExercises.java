@@ -1,4 +1,4 @@
-package SixthSprintPractice;
+package SixthSprintPractice.DateAndTimeExercises;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

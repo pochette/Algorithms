@@ -1,4 +1,4 @@
-package SixthSprintPractice;
+package SixthSprintPractice.DateAndTimeExercises;
 
 
 //продолжительность в годах - getYear()
@@ -8,12 +8,9 @@ package SixthSprintPractice;
 // день, обозначенный датой endDateExclusive в расчете не учитывается.
 
 
-import ComparatorAndSort.DateTime;
-
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
-import java.util.logging.Formatter;
 
 class PeriodAndDurationExercises {
     public static void main(String[] args) throws InterruptedException {
