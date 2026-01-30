@@ -1,7 +1,5 @@
 package Comparator;
 
-import Sort.InsertionSort;
-
 import java.util.*;
 
 public class CollectionsMethods {
