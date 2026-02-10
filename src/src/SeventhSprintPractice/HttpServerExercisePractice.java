@@ -28,21 +28,21 @@ public class HttpServerExercisePractice {
 
     }
 
-    private static String handlePostMethod(HttpExchange httpExchange) throws IOException {
+    private static String handlePostMethod(HttpExchange httpExchange, String bodyGreeting) throws IOException {
         String path = httpExchange.getRequestURI().getPath();
         String[] splitStrings = path.split("/");
         String job = splitStrings[2];
         String name = splitStrings[3];
         Headers requestHeaders = httpExchange.getRequestHeaders();
-        String bodyGreeting = new String(httpExchange.getRequestBody().readAllBytes(), DEFAULT_CHARSET);
-        //Заголовки запроса: [Accept=[*/*], Host=[localhost:8080], User-agent=[insomnia/12.3.1], Content-type=[application/json], Content-length=[6], Wishgoodday=[true]]
+        // bodyGreeting передаётся как параметр — InputStream уже прочитан в месте вызова
         String response ="";
 
-        if (requestHeaders.get("Wishgoodday").equals("true") && bodyGreeting.equals("Доброе утро")) {
-            response = bodyGreeting + ", " + job + " " + name + "! Хорошего дня!";
+        if ( requestHeaders.containsKey("Wishgoodday") && requestHeaders.get("Wishgoodday").contains("true")
+                && bodyGreeting != null && !bodyGreeting.isEmpty()) {
+            response = bodyGreeting + ", " + job + " " + name + "!" + " Хорошего дня!";
             System.out.println(response);
         } else {
-            response = bodyGreeting + ", " + job + " " + name + "!";
+            response = bodyGreeting +  job + " " + name + "!";
             System.out.println(response);
         }
         return response;
@@ -69,7 +69,7 @@ public class HttpServerExercisePractice {
             } else if (method.equals("POST")) {
                 InputStream requestBody = httpExchange.getRequestBody();
                 String body = new String(requestBody.readAllBytes(), DEFAULT_CHARSET);
-                response = handlePostMethod(httpExchange);
+                response = handlePostMethod(httpExchange, body);
                 System.out.println(response);
             } else {
                 response = "Некорректный метод запроса: " + method;
