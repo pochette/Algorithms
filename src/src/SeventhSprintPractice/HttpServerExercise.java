@@ -39,10 +39,11 @@ public class HttpServerExercise {
     static class HelloHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
+            System.out.println();
             String method = httpExchange.getRequestMethod();
             if (method.equals("GET")) {
                 System.out.println("Здравствуйте!");
-            } if(method.equals("POST")) {
+            } else if(method.equals("POST")) {
                 System.out.println("Вы использовали метод POST.");
             }
             else {
@@ -50,9 +51,13 @@ public class HttpServerExercise {
             }
 
             System.out.println("Началась обработка /hello " + method + "  запроса от клиента.");
+
+
             InputStream requestBody = httpExchange.getRequestBody();
             String body = new String (requestBody.readAllBytes(), DEFAULT_CHARSET);
             System.out.println("Тело запроса: " + body);
+
+
 
             String response = "Началась обработка запроса /hello от клиента!";
             httpExchange.sendResponseHeaders(200, 0);
@@ -64,10 +69,16 @@ public class HttpServerExercise {
                 System.out.println("Запрос содержит JSON данные.");
             }
 
+
+
             URI requestURI = httpExchange.getRequestURI();
             System.out.println("Запрошенный URI: " + requestURI.toString());
             String path = requestURI.getPath();
             String[] splitStrings = path.split("/");
+
+            String name = splitStrings[2];
+            System.out.println("Извлеченное имя из пути: " + name);
+
             System.out.println("Разделенный путь: " + List.of(splitStrings));
             System.out.println("Количество частей в пути: " + splitStrings.length);
             System.out.println( "getAuthority: " + requestURI.getAuthority());
@@ -77,8 +88,7 @@ public class HttpServerExercise {
             System.out.println( "getRawPath: " + requestURI.getRawPath());
             System.out.println( "getRawQuery: " + requestURI.getRawQuery());
             System.out.println( "getScheme: " + requestURI.getScheme());
-            String name = splitStrings[2];
-            System.out.println("Извлеченное имя из пути: " + name);
+
 
             try (OutputStream os = httpExchange.getResponseBody()) {
                 os.write(response.getBytes());

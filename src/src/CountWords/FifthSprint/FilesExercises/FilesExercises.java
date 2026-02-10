@@ -1,4 +1,4 @@
-package FifthSprint.FilesExercises;
+package CountWords.FifthSprint.FilesExercises;
 
 import java.io.File;
 import java.nio.file.Files;

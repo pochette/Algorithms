@@ -1,4 +1,4 @@
-package FifthSprint.FunctionalStyleExersices;
+package CountWords.FifthSprint.FunctionalStyleExersices;
 
 import javax.swing.text.html.Option;
 import java.util.ArrayList;

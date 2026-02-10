@@ -17,6 +17,7 @@ public class StringCrypt {
         StringBuilder temp = new StringBuilder();
 
         char[] chars = input.toCharArray();
+        return null;
     }
 
 

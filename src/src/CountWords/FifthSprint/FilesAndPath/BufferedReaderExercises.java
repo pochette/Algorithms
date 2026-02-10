@@ -1,4 +1,4 @@
-package FifthSprint.FilesAndPath;
+package CountWords.FifthSprint.FilesAndPath;
 
 import java.io.Closeable;
 import java.io.FileNotFoundException;

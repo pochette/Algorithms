@@ -1,4 +1,4 @@
-package FifthSprint.Exceptions;
+package CountWords.FifthSprint.Exceptions;
 
 import java.io.ByteArrayInputStream;
 import java.net.MalformedURLException;

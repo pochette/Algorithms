@@ -1,4 +1,4 @@
-package FifthSprint.ExceptionsExcersices;
+package CountWords.FifthSprint.ExceptionsExcersices;
 
 import java.io.File;
 

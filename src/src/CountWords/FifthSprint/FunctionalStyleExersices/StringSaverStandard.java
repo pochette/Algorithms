@@ -1,4 +1,4 @@
-package FifthSprint.FunctionalStyleExersices;
+package CountWords.FifthSprint.FunctionalStyleExersices;
 
 import java.util.*;
 import java.util.function.Consumer;
