@@ -1,0 +1,32 @@
+package SeventhSprintPractice;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
+
+public class URIExercises {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        URI uri = URI.create("https://github.com/orgs/community/discussions/144430");
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .GET()
+                .uri(uri)
+                .version(HttpClient.Version.HTTP_1_1)
+                .header("Accept", "text/html")
+                .build();
+
+        HttpClient client = HttpClient.newHttpClient();
+
+        HttpResponse.BodyHandler<String> handler = HttpResponse.BodyHandlers.ofString();
+
+        HttpResponse<String> response = client.send(request, handler);
+
+        System.out.println("Код ответа: "  + response.statusCode());
+        System.out.println("Тело ответа: " + response.body());
+
+    }
+
+}
